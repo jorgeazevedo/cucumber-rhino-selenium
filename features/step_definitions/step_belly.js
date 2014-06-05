@@ -3,11 +3,6 @@ importClass(org.openqa.selenium.WebDriver);
 importClass(org.openqa.selenium.WebElement);
 importClass(org.openqa.selenium.htmlunit.HtmlUnitDriver);
 importClass(org.openqa.selenium.firefox.FirefoxDriver);
-importClass(org.openqa.selenium.firefox.FirefoxDriver);
-importClass(org.openqa.selenium.remote.DesiredCapabilities);
-importClass(org.openqa.selenium.remote.RemoteWebDriver);
-importClass(java.net.MalformedURLException);
-importClass(java.net.URL);
 
 function assertEquals(expected, actual) {
     if (expected != actual) {
@@ -25,8 +20,7 @@ function assertContains(expectedVal, array) {
 Given(/^I have (\d+) cukes in my belly$/, function(arg1) {
         java.lang.System.setProperty("webdriver.firefox.useExisting", "true"); 
         // The Firefox driver supports javascript 
-        //var driver = new FirefoxDriver();
-	var driver = new RemoteWebDriver(new URL(" http://127.0.0.1:4444/wd/hub"), DesiredCapabilities.firefox()); 
+        var driver = new FirefoxDriver();
         
         // Go to the Google Suggest home page
         driver.get("http://www.google.com/webhp?complete=1&hl=en");
