@@ -1,4 +1,5 @@
-cucumber-rhino-selenium
-=======================
+# Rhino/Selenium skeleton
 
-A hello world type project for cucumber-rhino and selenium.
+This is a barebones project for Cucumber/Rhino/Selenium. Run with
+
+    make
